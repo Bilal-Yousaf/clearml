@@ -1,0 +1,6 @@
+matplotlib
+tensorboardX
+tensorboard>=1.14.0
+torch
+torchvision
+clearml==1.0.5
