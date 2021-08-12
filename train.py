@@ -73,10 +73,9 @@ def test(args, model, device, test_loader, epoch):
         100. * correct / len(test_loader.dataset)))
 
 
-def main():
+def main(task):
     # Connecting ClearML with the current process,
     # from here on everything is logged automatically
-    task = Task.init(project_name='bilal_clearml', task_name='pytorch_mnist_train', output_uri='s3://tasseldet-ds/')
 
     # Training settings
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
@@ -135,4 +134,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    task = Task.init(project_name='bilal_clearml', task_name='pytorch_mnist_train', output_uri='s3://tasseldet-ds/')
+
+    main(task)
