@@ -4,3 +4,4 @@ tensorboard>=1.14.0
 torch
 torchvision
 clearml==1.0.5
+boto3>=1.9
