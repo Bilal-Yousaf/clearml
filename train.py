@@ -134,7 +134,7 @@ def main(task):
 
 
 if __name__ == '__main__':
-    # task = Task.init(project_name='bilal_clearml', task_name='pytorch_mnist_train', output_uri='s3://tasseldet-ds/')
-    task = Task.current_task()
+    task = Task.init(project_name='bilal_clearml', task_name='pytorch_mnist_train', output_uri='s3://tasseldet-ds/')
+    print(task.get_output_destination())
 
     main(task)
