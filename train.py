@@ -136,5 +136,7 @@ def main(task):
 if __name__ == '__main__':
     task = Task.init(project_name='bilal_clearml', task_name='pytorch_mnist_train', output_uri='s3://tasseldet-ds/')
     print(task.get_output_destination())
+    print(task.output_uri)
+    task.output_uri = 's3://tasseldet-ds/'
 
     main(task)
